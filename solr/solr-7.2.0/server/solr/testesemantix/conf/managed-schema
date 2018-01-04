@@ -439,8 +439,8 @@
   <field name="id" type="string" multiValued="false" indexed="true" required="true" stored="true"/>
   <field name="text_shingles" type="text_shingles" indexed="true" stored="true"/>
 
-  <field name="Nome Municipio Search" type="text_pt" indexed="true" stored="true"/>
-  <field name="Nome Favorecido Search" type="text_pt" indexed="true" stored="true"/>    
+  <field name="NomeMunicipioSearch" type="text_pt" indexed="true" stored="true"/>
+  <field name="NomeFavorecidoSearch" type="text_pt" indexed="true" stored="true"/>    
 
   <dynamicField name="*_txt_en_split_tight" type="text_en_splitting_tight" indexed="true" stored="true"/>
   <dynamicField name="*_descendent_path" type="descendent_path" indexed="true" stored="true"/>
@@ -512,6 +512,6 @@
   <copyField source="Nome_Municipio" dest="text_shingles"/>
   <copyField source="Nome_Favorecido" dest="_text_"/>
   <copyField source="Nome_Municipio" dest="_text_"/>  
-  <copyField source="Nome_Municipio" dest="Nome Municipio Search"/>
-  <copyField source="Nome_Favorecido" dest="Nome Favorecido Search"/>
+  <copyField source="Nome_Municipio" dest="NomeMunicipioSearch"/>
+  <copyField source="Nome_Favorecido" dest="NomeFavorecidoSearch"/>
 </schema>
