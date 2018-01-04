@@ -52,7 +52,7 @@ Criei dois fields para tratar as buscas com text_pt, serao utilizados como copyF
 ![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/consulta%20com%20facet.png)
 ![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/consulta%20texto.png)
 
-<b>Itens a melhorar</b>
+<b>Itens a melhorar</b><br>
 Colocar Highlight<br>
 Colocar Spellcheck<br>
 Colocar Mlt<br>
