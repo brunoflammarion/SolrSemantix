@@ -1,5 +1,4 @@
 # Teste Solr Semantix
-Teste Solr Semantix
 
 Desafio Solr 
 
