@@ -778,6 +778,7 @@
       <str name="facet.mincount">1</str>
       <str name="facet.field">UF</str>
       <str name="facet.field">Nome_Municipio</str>
+      <str name="qf">NomeMunicipioSearch^10.0 NomeFavorecido^20.0 Search _text_^5</str>
 
       <str name="hl">true</str>
       <str name="hl.q">*</str>
