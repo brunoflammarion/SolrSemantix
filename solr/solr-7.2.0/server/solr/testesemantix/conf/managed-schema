@@ -511,5 +511,7 @@
   <copyField source="Nome_Favorecido" dest="text_shingles"/>
   <copyField source="Nome_Municipio" dest="text_shingles"/>
   <copyField source="Nome_Favorecido" dest="_text_"/>
-  <copyField source="Nome_Municipio" dest="_text_"/>
+  <copyField source="Nome_Municipio" dest="_text_"/>  
+  <copyField source="Nome_Municipio" dest="Nome Municipio Search"/>
+  <copyField source="Nome_Favorecido" dest="Nome Favorecido Search"/>
 </schema>
