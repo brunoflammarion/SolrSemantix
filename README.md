@@ -37,16 +37,23 @@ Coloquei o arquivo em:
 3. Corrija o schema para indexar os campos que tenham conteúdo em português com o tipo text_pt com copyField para um campo text_general. 
 
 Criei dois fields para tratar as buscas com text_pt, serao utilizados como copyField de campos originais que importei com o tipo string
-![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/Configuracoes%20field.PNG)
+![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/96f9caa44ed5148246e510880610aea606352e5e/copyfield.PNG)
 
 4. Crie CopyFields em string para armazenar conteúdos que serão usados em um facet. 
-![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/copyfield.PNG)
+![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/96f9caa44ed5148246e510880610aea606352e5e/Configuracoes%20field.PNG)
 
 5. Configure o solrconfig.xml no requestHandler /browse para usar os campos de facet corretos. 
+![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/browse.PNG)
 
 6. Configure os query fields com pesos adequados para encontrar as informações indexadas dentro do contexto escolhido. 
+![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/browse.PNG)
 
 7. Envie print da tela /browse do Solr com uma busca com os facets escolhidos e com o resultado desejado. 
+![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/consulta%20com%20facet.png)
+![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/consulta%20texto.png)
 
-
+*******Itens a melhorar*********
+Colocar Highlight
+Colocar Spellcheck
+Colocar Mlt
 
