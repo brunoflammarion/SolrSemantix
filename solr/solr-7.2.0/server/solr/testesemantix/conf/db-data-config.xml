@@ -1,0 +1,56 @@
+<dataConfig>
+    <dataSource name="fds" encoding="UTF-8"  type="FileDataSource" />
+    <document>
+      <!-- Get a list of files from the last time the handler ran -->
+      <entity name="hathifile"
+              processor="FileListEntityProcessor"
+	      baseDir="/home/bruno/solr/solr-7.2.0/server/solr/testesemantix/conf/"
+              fileName="201710_BolsaFamiliaFolhaPagamento.csv"
+              rootEntity="false"
+      >
+
+
+	 <entity name="entryline"
+                    processor="LineEntityProcessor"
+                    url="${hathifile.fileAbsolutePath}"
+                    rootEntity="true"
+                    dataSource="fds"
+                    separator="\t"
+     		    transformer="RegexTransformer"
+            >
+		<field column="id" name="id" sourcecolname="rawline" regex="^(.*)\t"/>      
+		<field column="string" name="string" sourcecolname="rawline" regex="\t(.*)$"/> 
+
+        <!-- <entity name="hathiline"
+                processor="LineEntityProcessor"
+                url="${hathifile.fileAbsolutePath}"
+                rootEntity="true"
+                dataSource="fds"
+                transformer="RegexTransformer"
+        >-->
+		
+
+<!-- Big ugly regexp to get all the tab-delimited fields 
+          <field column="rawLine"
+                 regex="^(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)$"
+                 groupNames="htid,access,rights,bibnum,enumcron,source,sourceid,oclcs,isbns,issns,lccns,title,imprint"
+          />
+		  
+		  <field column="rawLine"
+                 regex="^(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)$"
+                 groupNames="UF,Código SIAFI Município,Nome Município,Código Função,Código Subfunção,Código Programa,Código Ação,NIS Favorecido,Nome Favorecido,Fonte-Finalidade,Valor Parcela,Mês Competência"
+          />-->
+
+		  
+
+<!-- Split the multi-values on comma 
+
+          <field column="oclc" splitBy="," sourceColName="oclcs" />
+          <field column="issn" splitBy="," sourceColName="issns" />
+          <field column="isbn" splitBy="," sourceColName="isbns" />
+          <field column="lccn" splitBy="," sourceColName="lccns" />-->
+        </entity> <!-- end of hathiline -->
+
+      </entity> <!-- end of hathifile -->
+    </document>
+  </dataConfig> 

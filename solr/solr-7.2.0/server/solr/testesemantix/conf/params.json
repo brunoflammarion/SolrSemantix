@@ -1,0 +1,36 @@
+{"params":{
+  "query":{
+    "defType":"edismax",
+    "q.alt":"*:*",
+    "rows":"10",
+    "fl":"*,score",
+    "":{"v":0}},
+  "facets":{
+    "facet":"on",
+    "facet.mincount":"1",
+    "facet.limit":10,
+    "f.UF.facet.mincount":"0",
+    "facet.field":["{!ex=type}UF", "Nome_Municipio"],
+    "":{"v":0}
+    },
+  "facets":{ 
+        "type":"range",
+	"field":"Valor_Parcela",
+	"start":0,
+	"end":100,
+	"gap":25
+    },
+  "browse":{
+    "type_fq":"{!field f=UF v=$type}",
+    "hl":"on",
+    "hl.fl":"Nome_Favorecido",
+    "debug":"true",
+    "hl.simple.pre":"HL_START",
+    "hl.simple.post":"HL_END",
+    "echoParams": "explicit",
+    "":{"v":0}},
+  "velocity":{
+    "wt":"velocity",
+    "v.template":"browse",
+    "v.layout":"layout",
+    "":{"v":0}}}}
