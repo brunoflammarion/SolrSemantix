@@ -33,6 +33,9 @@ iconv -f ISO-8859-1 -t UTF-8//TRANSLIT input.file -o out.file
 Coloquei o arquivo em:
 ![alt text](https://github.com/brunoflammarion/SolrSemantix/blob/master/arquivo.png)
 
+Para indexar utilizei 
+curl 'http://localhost:8983/solr/testesemantix/update?commit=true&separator=%09' --data-binary @example/exampledocs/201710_BolsaFamiliaFolhaPagamento.csv -H 'Content-type:application/csv'
+
 3. Corrija o schema para indexar os campos que tenham conteúdo em português com o tipo text_pt com copyField para um campo text_general. 
 
 Criei dois fields para tratar as buscas com text_pt, serao utilizados como copyField de campos originais que importei com o tipo string
